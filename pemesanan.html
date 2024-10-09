@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Kue - Bromissu</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f3e4a6; /* Cream pastel */
+    }
+    .order-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #e5c38c; /* Light cream */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .order-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6D4C41; /* Dark Brown */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-control {
+      margin-bottom: 15px;
+    }
+    .order-btn, .back-btn {
+      background-color: #6D4C41;
+      color: white;
+      border-radius: 20px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Form Pemesanan Kue -->
+  <div class="container order-container">
+    <h2 class="order-title">Form Pemesanan Kue</h2>
+    <form>
+      <div class="form-group">
+        <label for="nama">Nama Pemesan:</label>
+        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama pemesan">
+      </div>
+      <div class="form-group">
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" class="form-control" id="telepon" placeholder="Masukkan nomor telepon">
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat Pengiriman:</label>
+        <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat pengiriman">
+      </div>
+      <div class="form-group">
+        <label for="jenis-kue">Jenis Kue:</label>
+        <select class="form-control" id="jenis-kue">
+          <option value="brownies">Brownies Classic</option>
+          <option value="tiramisu">Brownies Tiramisu</option>
+          <option value="tiramisu">Brownies Strawberry</option>
+          <option value="tiramisu">Brownies Coklat</option>
+          <option value="tiramisu">Apple Bun</option>
+          <option value="tiramisu">Twilight Cake</option>
+          <option value="tiramisu">Rarity Sweet</option>
+          <option value="tiramisu">Butter Side</option>
+          <option value="tiramisu">Milk Pie</option>
+          <option value="tiramisu">Banana Cream</option>
+          <option value="cheesecake">Cheesecake</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" class="form-control" id="jumlah" placeholder="Masukkan jumlah pesanan">
+      </div>
+      <button type="submit" class="btn order-btn">Pesan Sekarang</button>
+      <a href="dashboard.html" class="btn back-btn">Kembali ke Dashboard</a> <!-- Tombol Kembali -->
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

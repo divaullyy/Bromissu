@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Penjualan - Toko Bromissu</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #F3E5AB; /* Cream pastel */
+    }
+    .report-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #e7d3b3; /* Light cream */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .report-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6D4C41; /* Dark Brown */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .table th {
+      background-color: #6D4C41;
+      color: rgb(255, 255, 255);
+    }
+    .back-btn {
+      background-color: #6D4C41;
+      color: white;
+      border-radius: 20px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Laporan Penjualan -->
+  <div class="container report-container">
+    <h2 class="report-title">Laporan Penjualan Kue Terlaris - 2024</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Bulan</th>
+          <th>Kue Terlaris</th>
+          <th>Jumlah Terjual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Januari</td>
+          <td>Brownies Coklat</td>
+          <td>120</td>
+        </tr>
+        <tr>
+          <td>Februari</td>
+          <td>Tiramisu</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>Maret</td>
+          <td>Cheesecake</td>
+          <td>110</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td>Brownies Strawberry</td>
+          <td>160</td>
+        </tr>
+        <tr>
+          <td>Mei</td>
+          <td>Apple Bun</td>
+          <td>130</td>
+        </tr>
+        <tr>
+          <td>Juni</td>
+          <td>Twilight Cake</td>
+          <td>140</td>
+        </tr>
+        <tr>
+          <td>Juli</td>
+          <td>Rarity Sweet</td>
+          <td>125</td>
+        </tr>
+        <tr>
+          <td>Agustus</td>
+          <td>Milk Pie</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>September</td>
+          <td>Butter Side</td>
+          <td>110</td>
+        </tr>
+        <tr>
+          <td>Oktober</td>
+          <td>Banana Cream</td>
+          <td>135</td>
+        </tr>
+        <tr>
+          <td>November</td>
+          <td>Brownies Coklat</td>
+          <td>145</td>
+        </tr>
+        <tr>
+          <td>Desember</td>
+          <td>Tiramisu</td>
+          <td>150</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Diagram Penjualan Kue Terlaris -->
+    <canvas id="salesChart"></canvas>
+
+    <a href="dashboard.html" class="btn back-btn">Kembali ke Dashboard</a> <!-- Tombol Kembali -->
+  </div>
+
+  <!-- Script untuk Chart.js -->
+  <script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+        datasets: [{
+          label: 'Jumlah Terjual',
+          data: [120, 150, 110, 160, 130, 140, 125, 100, 110, 135, 145, 150],
+          backgroundColor: [
+            '#A1887F', '#D7CCC8', '#8D6E63', '#5D4037', '#795548', '#4E342E', '#3E2723', '#8D6E63', '#A1887F', '#D7CCC8', '#4E342E', '#3E2723'
+          ],
+          borderColor: [
+            '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41', '#6D4C41'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pelanggan - Toko Bromissu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom Theme */
+        body {
+            background-color: #F3E5AB; /* Cream pastel */
+        }
+        .container {
+            background-color: #D2B48C; /* Light Brown */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .btn {
+            background-color: #6D4C41; /* Dark Brown */
+            color: #F3E5AB; /* Cream pastel text */
+        }
+        .btn:hover {
+            background-color: #3E2723; /* Darker shade for hover effect */
+        }
+        .btn-secondary {
+            background-color: #BDBDBD; /* Gray for 'Kembali' button */
+            color: #FFFFFF; /* White text */
+        }
+        .btn-secondary:hover {
+            background-color: #9E9E9E; /* Darker gray for hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tambah Pelanggan</h2>
+        <form action="submit_tambah_pelanggan.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telepon">Telepon:</label>
+                <input type="text" class="form-control" id="telepon" name="telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea class="form-control" id="alamat" name="alamat" required></textarea>
+            </div>
+            <button type="submit" class="btn">Tambah Pelanggan</button>
+            <a href="pelanggan.html" class="btn btn-secondary">Kembali</a>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

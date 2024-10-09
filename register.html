@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Pelanggan - Toko Bromissu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #F3E5AB; /* Cream Pastel */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #D2B48C; /* Brown Pastel */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #3E2723; /* Dark Brown */
+        }
+        .login-link {
+            margin-top: 20px;
+            color: #3E2723; /* Dark Brown */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register Pelanggan Baru</h2>
+        <form action="proses_register.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="no_telepon">No Telepon:</label>
+                <input type="text" class="form-control" id="no_telepon" name="no_telepon" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+        
+        <div class="login-link">
+            <p>Sudah punya akun? <a href="login.html">Silahkan login</a></p>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Toko Bromissu</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #F3E5AB; /* Cream pastel */
+    }
+    .profile-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #FFF3E0; /* Light cream */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .profile-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6D4C41; /* Dark Brown */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-info {
+      margin-bottom: 15px;
+    }
+    .profile-info label {
+      font-weight: bold;
+    }
+    .edit-btn, .save-btn, .cancel-btn, .back-btn {
+      background-color: #6D4C41;
+      color: white;
+      border-radius: 20px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profil -->
+  <div class="container profile-container">
+    <h2 class="profile-title">Profil Pengguna</h2>
+
+    <!-- Informasi Profil -->
+    <div id="profile-info">
+      <div class="profile-info">
+        <label for="username">Username:</label>
+        <p id="username">Budi Setiawan</p>
+      </div>
+      <div class="profile-info">
+        <label for="email">Email:</label>
+        <p id="email">budi@gmail.com</p>
+      </div>
+      <div class="profile-info">
+        <label for="phone">Nomor Telepon:</label>
+        <p id="phone">+62 812 3456 7890</p>
+      </div>
+      <div class="profile-info">
+        <label for="address">Alamat:</label>
+        <p id="address">Jl. Sudirman No. 25, Jakarta</p>
+      </div>
+      <button class="btn edit-btn" onclick="showEditForm()">Edit Profil</button>
+      <a href="dashboard.html" class="btn back-btn">Kembali ke Dashboard</a> <!-- Tombol Kembali -->
+    </div>
+
+    <!-- Form Edit Profil -->
+    <div id="edit-form" class="hidden">
+      <div class="form-group">
+        <label for="edit-username">Username:</label>
+        <input type="text" class="form-control" id="edit-username" value="Budi Setiawan">
+      </div>
+      <div class="form-group">
+        <label for="edit-email">Email:</label>
+        <input type="email" class="form-control" id="edit-email" value="budi@example.com">
+      </div>
+      <div class="form-group">
+        <label for="edit-phone">Nomor Telepon:</label>
+        <input type="tel" class="form-control" id="edit-phone" value="+62 812 3456 7890">
+      </div>
+      <div class="form-group">
+        <label for="edit-address">Alamat:</label>
+        <input type="text" class="form-control" id="edit-address" value="Jl. Sudirman No. 25, Jakarta">
+      </div>
+      <button class="btn save-btn" onclick="saveProfile()">Simpan Perubahan</button>
+      <button class="btn cancel-btn" onclick="cancelEdit()">Batal</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript untuk Menampilkan dan Menyimpan Form Edit -->
+  <script>
+    function showEditForm() {
+      document.getElementById("profile-info").classList.add("hidden");
+      document.getElementById("edit-form").classList.remove("hidden");
+    }
+
+    function saveProfile() {
+      // Ambil nilai dari form
+      const username = document.getElementById("edit-username").value;
+      const email = document.getElementById("edit-email").value;
+      const phone = document.getElementById("edit-phone").value;
+      const address = document.getElementById("edit-address").value;
+
+      // Simpan nilai baru ke dalam elemen profil
+      document.getElementById("username").innerText = username;
+      document.getElementById("email").innerText = email;
+      document.getElementById("phone").innerText = phone;
+      document.getElementById("address").innerText = address;
+
+      // Sembunyikan form dan tampilkan kembali informasi profil
+      document.getElementById("edit-form").classList.add("hidden");
+      document.getElementById("profile-info").classList.remove("hidden");
+    }
+
+    function cancelEdit() {
+      // Sembunyikan form dan tampilkan kembali informasi profil
+      document.getElementById("edit-form").classList.add("hidden");
+      document.getElementById("profile-info").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>

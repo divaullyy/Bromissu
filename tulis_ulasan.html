@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulis Ulasan - Toko Bromissu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #F3E5AB; /* Cream Pastel */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #D2B48C; /* Brown Pastel */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #3E2723; /* Dark Brown */
+        }
+        .btn-custom {
+            background-color: #3E2723; /* Dark Brown */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tulis Ulasan</h2>
+        <form action="submit_ulasan.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="ulasan">Ulasan:</label>
+                <textarea class="form-control" id="ulasan" name="ulasan" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Kirim Ulasan</button>
+            <a href="ulasan.html" class="btn btn-secondary">Kembali ke Ulasan</a>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

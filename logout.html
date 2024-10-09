@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout - Toko Bromissu</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #F3E5AB; /* Cream pastel */
+    }
+    .logout-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #FFF3E0; /* Light cream */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .logout-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6D4C41; /* Dark Brown */
+      margin-bottom: 20px;
+    }
+    .logout-btn, .cancel-btn {
+      background-color: #6D4C41;
+      color: white;
+      border-radius: 20px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Konfirmasi Logout -->
+  <div class="container logout-container">
+    <h2 class="logout-title">Apakah Anda Yakin Ingin Keluar?</h2>
+    <p>Anda akan keluar dari akun Toko Bromissu.</p>
+    <button class="btn logout-btn" onclick="logout()">Logout</button>
+    <button class="btn cancel-btn" onclick="cancelLogout()">Batal</button>
+  </div>
+
+  <!-- JavaScript untuk Logout -->
+  <script>
+    function logout() {
+      // Arahkan ke halaman login setelah logout
+      window.location.href = 'login.html';
+      alert("Anda telah berhasil logout.");
+    }
+
+    function cancelLogout() {
+      // Kembali ke dashboard jika batal logout
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+
+</body>
+</html>
